@@ -1,16 +1,8 @@
 import React from "react";
-import Header from "./components/header";
-import Main from "./components/main";
-import Footer from "./components/footer";
+import "./components/styles/styles.css";
 
-function App() {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
-}
+// function App() {
 
-export default App;
+// }
+
+// export default App;
