@@ -1,0 +1,162 @@
+.header {
+    background-color: #ffa12e;
+    display: flex;
+    padding: 30px 50px;
+    justify-content: space-between;
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+/*
+* TODO: Добавить лого в header
+*/
+/* Стили для логотипа */
+.logo {
+    font-size: 24px;       /* Размер текста */
+    font-weight: 700;      /* Жирный шрифт */
+    color: #fff;           /* Белый цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: transform 0.2s ease; /* Плавное увеличение при наведении */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Стили для списка ссылок */
+.list {
+    display: flex;
+    gap: 30px;             /* Расстояние между ссылками */
+}
+
+/* Стили для каждой ссылки */
+.link {
+    color: #fff;           /* Белый цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 500;      /* Полужирный шрифт */
+    font-size: 18px;       /* Размер текста */
+    padding: 5px 10px;     /* Внутренние отступы */
+    border-radius: 5px;    /* Скругление углов */
+    transition: all 0.3s ease; /* Плавные анимации */
+}
+
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Легкое свечение */
+}
+
+/* Стили для ссылки с картинкой */
+.profile-link {
+  display: inline-block;
+  width: 40px;         /* Фиксируем размер контейнера */
+  height: 40px;
+}
+
+/* Стили для самой картинки */
+.profile-link img {
+  width: 100%;         /* Картинка займет 100% ширины контейнера */
+  height: 100%;        /* и 100% высоты контейнера */
+  object-fit: cover;   /* Сохранит пропорции без искажений */
+  border-radius: 50%;  /* Круглая форма (опционально) */
+}
+
+/* Стили для переключателя темы */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Общие стили для header */
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+/* Темная тема */
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --header-bg: #333;
+}
+
+.dark-theme .header {
+  background-color: var(--header-bg);
+}
+
+.dark-theme .link {
+  color: var(--text-color);
+}
+
+.dark-theme body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Стили для переключателя с иконками */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 20px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.theme-icon.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.theme-icon.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Темная тема */
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --header-bg: #2d2d2d;
+  --link-color: #ffa12e;
+}
+
+.dark-theme .header {
+  background-color: var(--header-bg);
+}
+
+.dark-theme .link {
+  color: var(--link-color);
+}
+
+.dark-theme body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}

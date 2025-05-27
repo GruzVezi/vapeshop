@@ -1,8 +1,13 @@
 import React from "react";
 import "./components/styles/styles.css";
+import Header from "./components/header";
 
-// function App() {
+function App() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Header />
+    </div>
+  );
+}
 
-// }
-
-// export default App;
+export default App;
