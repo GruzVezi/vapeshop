@@ -1,0 +1,114 @@
+.profile-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;         
+  height: 100vh;        
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%); 
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.profile-modal.open {
+  transform: translateX(0);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profileInfo {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.avatarContainer {
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.userName {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.userInfo {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.infoLabel {
+  font-weight: 600;
+}
+
+.logoutButton {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.dark-theme .profile-modal {
+  background: #2d2d2d;
+  color: white;
+}
+
+.dark-theme .closeButton {
+  color: #aaa;
+}
+
+.dark-theme .userInfo {
+  color: #ddd;
+}
+
+.dark-theme .logoutButton {
+  background: #ff787d;
+}

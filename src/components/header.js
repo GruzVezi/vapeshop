@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./styles/styles-header.css";
 
-const Header = () => {
+const Header = ({ onProfileClick }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -27,9 +27,9 @@ const Header = () => {
         <div className='list'>
           <a className='link' href='#'>Новинки</a>
           <a className='link' href='#'>Каталог</a>
-          <a href='/profile' className='profile-link'>
+          <div onClick={ onProfileClick } className='profile-link' role='button' tabIndex={0}>
             <img src='/profile.png' className='pngLink' alt='Profile' />
-          </a>
+          </div>
         </div>
         <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
             <div className="theme-icons">
