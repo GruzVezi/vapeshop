@@ -5,6 +5,7 @@
 В терминал:
 ```
 npm install
+npm audit fix --force
 ```
 
 Запуск сайта локально:
